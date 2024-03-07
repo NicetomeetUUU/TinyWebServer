@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
     //需要修改的数据库信息,登录名,密码,库名
     string user = "qjj";
     string passwd = "syqjj";
-    string databasename = "uer_info";
+    string databasename = "user_info";
 
     //命令行解析
     Config config;

@@ -2,6 +2,7 @@
 #define CONFIG_H
 
 #include "webserver.h"
+#include <yaml-cpp/yaml.h>
 
 using namespace std;
 

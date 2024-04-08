@@ -1,11 +1,13 @@
 #include "config.h"
+#include <yaml-cpp/yaml.h>
 
 int main(int argc, char *argv[])
 {
     //需要修改的数据库信息,登录名,密码,库名
-    string user = "root";
-    string passwd = "root";
-    string databasename = "qgydb";
+    YAML::Node sql_config = YAML::LoadFile("./database_info/database_info.yaml");
+    string user = sql_config["user"].as<string>();
+    string passwd = sql_config["passwd"].as<string>();
+    string databasename = sql_config["databasename"].as<string>();
 
     //命令行解析
     Config config;
